@@ -1,161 +1,53 @@
-
-
-let canvas, ctx, gravity, ball, friction, ball2
-
-function init() {
-    canvas = document.getElementById('canvas');
-    ctx = canvas.getContext('2d');
-
-
-    canvas.width = 800
-    canvas.height = 800
-
-
-    gravity = 0
-    friction = 0.5
-
-    ball = {
-        bounce: 0.75,
-        radius: 30,
-        x: canvas.width / 2,
-        y: canvas.height / 2,
-        velX: (Math.random() * 15 + 5) * (Math.floor(Math.random() * 2) || -1),
-        velY: (Math.random() * 15 + 5) * (Math.floor(Math.random() * 2) || -1)
+var canvas = {
+    element: document.getElementById('canvas'),
+    width: 600,
+    height: 400,
+    initialize: function () {
+        this.element.style.width = this.width + 'px';
+        this.element.style.height = this.height + 'px';
+        document.body.appendChild(this.element);
     }
+};
 
-    ball2 = {
-        bounce: 0.95,
-        radius: 50,
-        x: canvas.width / 2,
-        y: canvas.height / 2,
-        velX: (Math.random() * 15 + 5) * (Math.floor(Math.random() * 2) || -1),
-        velY: (Math.random() * 15 + 5) * (Math.floor(Math.random() * 2) || -1)
+var Ball = {
+    create: function (color, dx, dy) {
+        var newBall = Object.create(this);
+        newBall.dx = dx;
+        newBall.dy = dy;
+        newBall.width = 40;
+        newBall.height = 40;
+        newBall.element = document.createElement('div');
+        newBall.element.style.backgroundColor = color;
+        newBall.element.style.width = newBall.width + 'px';
+        newBall.element.style.height = newBall.height + 'px';
+        newBall.element.className += ' ball';
+        newBall.width = parseInt(newBall.element.style.width);
+        newBall.height = parseInt(newBall.element.style.height);
+        canvas.element.appendChild(newBall.element);
+        return newBall;
+    },
+    moveTo: function (x, y) {
+        this.element.style.left = x + 'px';
+        this.element.style.top = y + 'px';
+    },
+    bounce: function (x, y) {
+        if (y < 0 || y > canvas.height - this.height) {
+            this.dy = -this.dy;
+        }
+    },
+    draw: function (x, y) {
+        this.moveTo(x, y);
+        var ball = this;
+        setTimeout(function () {
+            ball.bounce(x, y);
+            ball.draw(x,y + ball.dy);
+        }, 1000 / 60);
     }
+};
 
+canvas.initialize();
+var ball1 =  Ball.create("blue", 5, 5);
+var ball2 =  Ball.create("red", 5, 9);
+ball1.draw(150, 0);
+ball2.draw(250, 0);
 
-    window.requestAnimationFrame(update)
-}
-
-function draw() {
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-
-    ctx.beginPath()
-
-    ctx.fillStyle = 'red'
-    ctx.lineWidth = 6;
-    ctx.strokeStyle = "black";
-
-    ctx.arc(
-        ball.x, ball.y,
-        ball.radius,
-        0, Math.PI * 2
-    )
-    ctx.stroke();
-    ctx.fill()
-
-    ctx.beginPath()
-    ctx.fillStyle = 'blue'
-    ctx.lineWidth = 6;
-    ctx.strokeStyle = 'black';
-
-
-    ctx.arc(
-        ball2.x, ball2.y,
-        ball2.radius,
-        0, Math.PI * 2
-    )
-    ctx.stroke();
-    ctx.fill()
-}
-
-
-function update() {
-
-    window.requestAnimationFrame(update)
-
-
-
-
-    if (ball.y + ball.radius >= canvas.height) {
-        ball.velY *= -ball.bounce
-        ball.y = canvas.height - ball.radius
-        ball.velX *= friction
-    }
-
-    if (ball.y - ball.radius <= 0) {
-        ball.velY *= -ball.bounce
-        ball.y = ball.radius
-        ball.velX *= friction
-    }
-
-
-    if (ball.x - ball.radius <= 0) {
-        ball.velX *= -ball.bounce
-        ball.x = ball.radius
-    }
-
-    if (ball.x + ball.radius >= canvas.width) {
-        ball.velX *= -ball.bounce
-        ball.x = canvas.width - ball.radius
-    }
-
-
-    if (ball.velX < 0.01 && ball.velX > -0.01) {
-        ball.velX = 0
-    }
-    if (ball.velY < 0.01 && ball.velY > -0.01) {
-        ball.velY = 0
-    }
-
-
-    ball.velY += gravity
-
-
-    ball.x += ball.velX
-    ball.y += ball.velY
-
-
-    if (ball2.y + ball2.radius >= canvas.height) {
-        ball2.velY *= -ball2.bounce
-        ball2.y = canvas.height - ball2.radius
-        ball2.velX *= friction
-    }
-
-    if (ball2.y - ball2.radius <= 0) {
-        ball2.velY *= -ball2.bounce
-        ball2.y = ball2.radius
-        ball2.velX *= friction
-    }
-
-
-    if (ball2.x - ball2.radius <= 0) {
-        ball2.velX *= -ball2.bounce
-        ball2.x = ball2.radius
-    }
-
-    if (ball2.x + ball2.radius >= canvas.width) {
-        ball2.velX *= -ball2.bounce
-        ball2.x = canvas.width - ball2.radius
-    }
-
-
-    if (ball2.velX < 0.01 && ball2.velX > -0.01) {
-        ball2.velX = 0
-    }
-    if (ball2.velY < 0.01 && ball2.velY > -0.01) {
-        ball2.velY = 0
-    }
-
-
-    ball2.velY += gravity
-
-    ball2.x += ball2.velX
-    ball2.y += ball2.velY
-
-
-    draw()
-}
-
-document.addEventListener('DOMContentLoaded', init);
