@@ -1,4 +1,4 @@
-var images = document.getElementsByClassName("images__items");   
+var images = document.getElementsByClassName("images__items");  
 console.log(images);
 
 function slider(images, interval) {
@@ -29,13 +29,17 @@ function slider(images, interval) {
         if (this.currentIndex >= this.images.length) {
           this.currentIndex = 0;
           this.position = 0;
-          for (let i = 0; i < this.images.length; i++) {
-            this.images[i].style.left = 0;
-          }
+          this.reset();
         }
       }      
     }, this.interval);
   };
+
+  this.reset = () => {
+    for (let i = 0; i < this.images.length; i++) {
+      this.images[i].style.left = 0;
+    }
+  }
 
   this.overset = () => {
     let rt = this;
@@ -52,4 +56,6 @@ function slider(images, interval) {
 var slider = new slider(images, 2000);
 slider.overset();
 slider.changeImage();
-console.log(slider);
+
+
+

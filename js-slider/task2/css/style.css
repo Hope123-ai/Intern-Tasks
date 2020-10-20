@@ -1,0 +1,36 @@
+#image-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.images__items{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.images__items_left {
+    position:absolute;
+    left: 10px;
+    top: 50%;
+    
+}
+
+.images__items_rite {
+    position:absolute;
+    right: 10px;
+    top: 50%;
+}
+.back-btn {
+    height: 15px;
+    width: 15px;
+}
+.front-btn {
+    height: 15px;
+    width: 15px;
+}
