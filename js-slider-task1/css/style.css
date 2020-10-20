@@ -1,0 +1,29 @@
+#image-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.images__items{
+    width: 100%;
+    /* display: none; */
+    height: 100%;
+    position: relative;
+    /* left: 0; */
+}
+
+
+.images__items_left {
+    position:absolute;
+    left: 10px;
+    top: 40%;
+}
+
+.images__items_rite {
+    position:absolute;
+    right: 10px;
+    top: 40%;
+}
