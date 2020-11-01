@@ -23,6 +23,11 @@
   padding-bottom: 1rem;
   padding-right: 2rem;
 }
+.description__details{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
 
 .contacts__desc {
   letter-spacing: 0px;
@@ -88,17 +93,41 @@
   justify-content: space-evenly;
 }
 
+.img__container{
+    position: relative;
+    /* display: none; */
+}
+.hoverbtn{
+    position: absolute;
+    /* z-index: 100; */
+    background-color: #3cb878;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+}
 .slider {
   font-size: 30px;
   padding: 9rem;
-  /* background: linear-gradient(rgba(43, 59, 47, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../images/pexels-iain-2267909.jpg"); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: black;
-  /* width: 100%; */
-  /* opacity: 0.5; */
+  }
+
+.description__quantity{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+    width: 30%;
 }
+.buttons{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    width: 40%;
+}
+
 
 .form {
   display: flex;
@@ -214,10 +243,11 @@ width: fit-content; */
   padding: 1rem;
 }
 .products--para {
-  justify-content: center;
   padding: 1rem;
   font-weight: bold;
   color: #333333;
+  /* width: 400px; */
+
 }
 
 .product--review {
@@ -354,7 +384,6 @@ width: fit-content; */
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        /* justify-content: space-evenly; */
         align-items: center;
       }
       
@@ -373,7 +402,7 @@ width: fit-content; */
       }
       .brand__name {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         font-size: 18px;

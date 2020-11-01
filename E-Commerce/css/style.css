@@ -47,6 +47,13 @@
   background-color: #f5f6f9;
 }
 
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
 .form__btn {
   background-color: #3cb878;
   color: white;
@@ -54,7 +61,57 @@
   border-style: none;
   margin: 1rem;
 }
+.cart__btn{
+    background-color: #3cb878;
+    display: flex;
+    flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1rem 0.5rem 0.5rem;
+  border-style: none;
+  margin: 1rem;
+}
 
+.description__title{
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.description__dropdown{
+    border: 0.5px solid #ebebeb;
+  padding: 1rem;
+  margin: 1rem;
+  width: 30%;
+}
+
+.description__number{
+    border: 0.5px solid #ebebeb;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.quantity--number{
+    border: 0.5px solid #ebebeb;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    margin: 0;    
+}
+
+.like__btn{
+    border: 0.5px solid #ebebeb;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    background-color: #ffffff;
+    
+    
+}
+
+.like__icon{
+    padding: 1rem;
+    height: 20px;
+    width: 20px;
+}
 .rating--title {
   padding-right: 1rem;
 }
@@ -127,6 +184,9 @@
   text-align: center;
   font-weight: bold;
 }
+.padding-1{
+    padding: 0.5rem;
+}
 
 .products--text {
   padding: 2px;
@@ -144,10 +204,50 @@
   width: 200px;
 }
 
+.detail__image{
+    height: 300px;
+    width: 200px;
+
+}
+.detail__product{
+    flex-wrap: 1;
+    
+}
+.detail__images{
+
+    
+}
+
+.description{
+    margin:1rem;
+    flex-grow: 1;
+
+}
+.description__rate{
+    display: flex ;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+   
+}
+.border-down{
+    border-bottom: 0.5px solid #EEEEEE;
+    line-height: 15px;
+    /* width: 60%; */
+    padding: 1rem;
+}
+.description__label{
+    display: flex;
+    flex-direction: row;
+}
 .product--name {
   padding-top: 0.5rem;
   font-size: 12px;
   font-weight: bold;
+}
+.para-text{
+    padding: 2rem;
+    font-weight: normal;
 }
 
 .product--price {
