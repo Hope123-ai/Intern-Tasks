@@ -1,228 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/layout.css" />
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/reset.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Itempage</title>
-  </head>
-  <div class="brand">
-    <div class="brand__name">
-      <strong class="brand__name--color">RENOSHOP</strong>BEE
-    </div>
-    <div class="brand__items">
-      <div class="brand__items--home">HOME</div>
-      <div class="brand__items--category">WOMEN</div>
-      <div class="brand__items--category">MEN</div>
-      <div class="brand__items--category">KIDS</div>
-      <div class="brand__items--category">JEWELLERY</div>
-      <div class="brand__items--category">ACCESSORIES</div>
-    </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Itempage</title>
+</head>
+<div class="brand">
+  <div class="brand__name">
+    <strong class="brand__name--color">RENOSHOP</strong>BEE
+  </div>
+  <div class="brand__items">
+    <div class="brand__items--home">HOME</div>
+    <div class="brand__items--category">WOMEN</div>
+    <div class="brand__items--category">MEN</div>
+    <div class="brand__items--category">KIDS</div>
+    <div class="brand__items--category">JEWELLERY</div>
+    <div class="brand__items--category">ACCESSORIES</div>
+  </div>
 
-    <div class="menu">
-      <div class="items">
-        <img src="images/shopping-cart-solid.svg" class="social__icon" />
-        <img src="images/search-solid.svg" class="social__icon" />
-        <img src="images/bars-solid.svg" class="social__icon" />
+  <div class="menu">
+    <div class="items">
+      <div class="cart__icon__container">
+        <img src="images/shopping-cart-solid.svg" class="social__icon" id="shopping__cart" />
+        <div class="cart__number" id="cart__number">
+        </div>
+      </div>
+      <img src="images/search-solid.svg" class="social__icon" />
+      <img src="images/bars-solid.svg" class="social__icon" />
+      <div class="menu__cartlist" id="hover__dropdown">
       </div>
     </div>
-  </div> 
-  <div class="detail">
-    <div class="detail__product">
-      <div class="detail__images">
-        <img src="images/pexels-mark-mccammon-1080696.jpg" class="detail__image"/>
-      </div> 
-      <div class="detail__image__slider">
-      </div>
+  </div>
+</div>
+<div class="detail">
+  <div class="detail__product">
+    <div class="detail__images">
+      <img src="images/pexels-mark-mccammon-1080696.jpg" class="detail__image" />
     </div>
-    <div class="description" id="description">
-      <!-- <div class="description__details"> -->
-        <div class="description__title" id="description__title"></div>
-        <div class="description__rate">
-        <div class="product--price padding-1" id="product--price"></div>
+    <div class="detail__image__slider">
+    </div>
+  </div>
+  <div class="description" id="description">
+    <div class="description__title" id="description__title"></div>
+    <div class="description__rate">
+      <div class="product--price padding-1" id="product--price"></div>
 
-        <div class="product--review padding-1" id="product--review">
-          <!-- <img src="images/star-solid.svg" class="product--rating" />
-          <img src="images/star-solid.svg" class="product--rating" />
-          <img src="images/star-solid.svg" class="product--rating" />
-          <img src="images/star-solid.svg" class="product--rating" />
-          <img src="images/star-regular.svg" class="product--rating" /> -->
-        </div>
-        </div>
-        <div class="products--para para-text border-down">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      <!-- </div> -->
-        <div class="description__label">
-        <select class="description__dropdown">
-          <option value="Select size">Select size</option>
-          <option value="X">X</option>
-          <option value="XL">XL</option>
-          <option value="M">M</option>
-          </select>
-        <select class="description__dropdown" onchange="label()">
-            <option value="Select color">Select Color</option>
-            <option value="black">Black</option>
-            <option value="blue">Blue</option>
-            <option value="red">Red</option>
-            <option value="brown">Brown</option>
-            </select>
-        </div>
-        <div class="description__quantity">
-            <div class="description__number">-</div>
-            <div class="description__number quantity--number">3</div>
-            <div class="description__number">+</div>
+      <div class="product--review padding-1" id="product--review">
       </div>
-      <div class="buttons">
-      <button class="cart__btn" id="cart__btn"><img src="images/shopping-cart-black.svg" class="social__icon"/>ADD TO CART</button>
+    </div>
+    <div class="products--para para-text border-down">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+    </div>
+    <div class="description__label">
+      <select class="description__dropdown" id="description__size">
+        <option value="Select size">Select size</option>
+        <option value="X">X</option>
+        <option value="XL">XL</option>
+        <option value="M">M</option>
+      </select>
+      <select class="description__dropdown" id="description__color">
+        <option value="Select color">Select Color</option>
+        <option value="black">Black</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="brown">Brown</option>
+      </select>
+    </div>
+    <div class="description__quantity">
+      <div class="description__number" id="quantity__minus">-</div>
+      <div class="description__number quantity--number" id="quantity__value">1</div>
+      <div class="description__number" id="quantity__plus">+</div>
+    </div>
+    <div class="buttons">
+      <button class="cart__btn" id="cart__btn"><img src="images/shopping-cart-black.svg" class="social__icon" />ADD TO
+        CART</button>
       <button class="like__btn"><img src="images/heart-regular.svg" class="like__icon"></button>
       <button class="like__btn"><img src="images/retweet-solid.svg" class="like__icon"></button>
     </div>
+  </div>
+</div>
+
+<div class="feedback">
+  <div class="feedback__container">
+    <div class="feeback__description feedback__tab">Description
+    </div>
+    <div class="feedback__reviews feedback__tab active">Reviews
+
     </div>
   </div>
+  <div class="">
 
-  <div class="feedback">
-      <div class="">
-      <div class="feeback__description">
-          
-
-      </div>
-      <div class="feedback__reviews">
-
-      </div>
-      </div>
-      <div class="">
-        
-
-      </div>
-
-      <div class="form">
-          Add a review
-          <div class="">
-
-          </div>
-
-          <div class="form__input">
-              <input type="text" placeholder="Your name" class="form__input--field">
-              <input type="text" placeholder="Your e-mail" class="form__input--field">
-
-          </div>
-          <div class="form__title">
-              <span>Your Review</span>
-              <div class="form__rating">
-                  <span class="rating--title">Your Rating: </span>
-                  <div class="product--review review--star border-right">
-                    <img src="images/star-regular.svg" class="product--rating" />
-                  </div>
-                  <div class="product--review review--star border-right">
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                  </div>
-                  <div class="product--review review--star border-right">
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                  </div>
-                  <div class="product--review review--star border-right">
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                  </div>
-                  <div class="product--review review--star">
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                    <img src="images/star-regular.svg" class="product--rating" />
-                  </div>
-              </div>
-          </div>
-          <div class="form__review">
-              <textarea class="form__input--textarea"></textarea>
-              <button class="form__btn">SUBMIT</button>
-          </div>
-          </div>
-          
-      </div>
-    
   </div>
-  <div class="best__seller__products">
-          <div class="product__menu">
-            <img
-              src="images/pexels-mark-mccammon-1080696.jpg"
-              class="product__images"/>
-            <div class="product--name">Cruise Dual Analog</div>
-            <div class="product--price">$250.00</div>
-            <div class="product--review">
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-regular.svg" class="product--rating" />
-            </div>
+
+  <div class="form">
+    <div class="form__reviews ">
+      <div class="review__image"
+      > 
+      </div>
+      <div class="review__comment">
+        <div class="review__rating">
+          <div class="product--review review--star review__item">
+            <img src="images/star-solid.svg" class="product--rating" />
+            <img src="images/star-solid.svg" class="product--rating" />
+            <img src="images/star-solid.svg" class="product--rating" />
+            <img src="images/star-solid.svg" class="product--rating" />
+            <img src="images/star-solid.svg" class="product--rating" />
           </div>
-          <div class="product__menu">
-            <img
-              src="images/pexels-mark-mccammon-1080696.jpg"
-              class="product__images"
-            />
-            <div class="product--name">Cruise Dual Analog</div>
-            <div class="product--price">$250.00</div>
-            <div class="product--review">
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-regular.svg" class="product--rating" />
-            </div>
-          </div>
-          <div class="product__menu">
-            <img
-              src="images/pexels-mark-mccammon-1080696.jpg"
-              class="product__images"
-            />
-            <div class="product--name">Cruise Dual Analog</div>
-            <div class="product--price">$250.00</div>
-            <div class="product--review">
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-regular.svg" class="product--rating" />
-            </div>
-          </div>
-          <div class="product__menu">
-            <img
-              src="images/pexels-mark-mccammon-1080696.jpg"
-              class="product__images"
-            />
-            <div class="product--name">Cruise Dual Analog</div>
-            <div class="product--price">$250.00</div>
-            <div class="product--review">
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-solid.svg" class="product--rating" />
-              <img src="images/star-regular.svg" class="product--rating" />
-            </div>
+          <div>
+
           </div>
         </div>
-  <div class="line">
-    <div class="line__text">
-      We're confident we've provided all the best for you. Stay connect with
-      us
+        <div class="review__name review__item">JOHN GREEN</div>
+        <div class="review__text review__item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+
+</div>
     </div>
-    <div class="contacts__social">
-      <img src="images/facebook-black.svg" class="social__icon" />
-      <img src="images/twitter-black.svg" class="social__icon" />
-      <img src="images/instagram-black.svg" class="social__icon" />
-      <img src="images/linkedin-black.svg" class="social__icon" />
-      <img src="images/behance-black.svg" class="social__icon" />
+<div class='review__title'>Add a review</div>
+    <div class="form__input">
+      <input type="text" placeholder="Your name" class="form__input--field">
+      <input type="text" placeholder="Your e-mail" class="form__input--field">
+
+    </div>
+    <div class="form__title">
+      <span class="form__heading">Your Review</span>
+      <div class="form__rating">
+        <span class="rating--title">Your Rating: </span>
+        <div class="product--review review--star border-right">
+          <img src="images/star-regular.svg" class="product--rating" />
+        </div>
+        <div class="product--review review--star border-right">
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+        </div>
+        <div class="product--review review--star border-right">
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+        </div>
+        <div class="product--review review--star border-right">
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+        </div>
+        <div class="product--review review--star">
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+          <img src="images/star-regular.svg" class="product--rating" />
+        </div>
+      </div>
+    </div>
+    <div class="form__review">
+      <textarea class="form__input--textarea"></textarea>
+      <button class="form__btn">SUBMIT</button>
     </div>
   </div>
+
+</div>
+
+</div>
+<div class="best__seller__products">
+  <div class="product__menu">
+    <img src="images/pexels-mark-mccammon-1080696.jpg" class="product__images" />
+    <div class="product--name">Cruise Dual Analog</div>
+    <div class="product--price">$250.00</div>
+    <div class="product--review">
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-regular.svg" class="product--rating" />
+    </div>
+  </div>
+  <div class="product__menu">
+    <img src="images/pexels-mark-mccammon-1080696.jpg" class="product__images" />
+    <div class="product--name">Cruise Dual Analog</div>
+    <div class="product--price">$250.00</div>
+    <div class="product--review">
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-regular.svg" class="product--rating" />
+    </div>
+  </div>
+  <div class="product__menu">
+    <img src="images/pexels-mark-mccammon-1080696.jpg" class="product__images" />
+    <div class="product--name">Cruise Dual Analog</div>
+    <div class="product--price">$250.00</div>
+    <div class="product--review">
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-regular.svg" class="product--rating" />
+    </div>
+  </div>
+  <div class="product__menu">
+    <img src="images/pexels-mark-mccammon-1080696.jpg" class="product__images" />
+    <div class="product--name">Cruise Dual Analog</div>
+    <div class="product--price">$250.00</div>
+    <div class="product--review">
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-solid.svg" class="product--rating" />
+      <img src="images/star-regular.svg" class="product--rating" />
+    </div>
+  </div>
+</div>
+<div class="line">
+  <div class="line__text">
+    We're confident we've provided all the best for you. Stay connect with
+    us
+  </div>
+  <div class="contacts__social">
+    <img src="images/facebook-black.svg" class="social__icon" />
+    <img src="images/twitter-black.svg" class="social__icon" />
+    <img src="images/instagram-black.svg" class="social__icon" />
+    <img src="images/linkedin-black.svg" class="social__icon" />
+    <img src="images/behance-black.svg" class="social__icon" />
+  </div>
+</div>
 </div>
 <div class="footer">
   <div class="footer__menu">
@@ -275,60 +281,18 @@
     </div>
   </div>
   <div class="footer__bottom">
-    <span class="footer__bottom--text"
-      >Copyright 2017 RenoshopBee all right reserved - Design by
+    <span class="footer__bottom--text">Copyright 2017 RenoshopBee all right reserved - Design by
       BeeStudios</span>
 
     <div class="footer--card">
-      <img src="images/cc-visa-brands.svg" class="footer--img"/>
-      <img src="images/cc-paypal-brands.svg" class="footer--img"/>
-      <img src="images/cc-visa-brands.svg" class="footer--img"/>
-      <img src="images/cc-paypal-brands.svg" class="footer--img"/>
+      <img src="images/cc-visa-brands.svg" class="footer--img" />
+      <img src="images/cc-paypal-brands.svg" class="footer--img" />
+      <img src="images/cc-visa-brands.svg" class="footer--img" />
+      <img src="images/cc-paypal-brands.svg" class="footer--img" />
     </div>
   </div>
 </div>
 </body>
-<script>
-  let url=window.location.search;
-  let result=url.split("=");
-  console.log(url,result[1]);
+<script src="js/itempage.js"></script>
 
-  function productName(result){
-    let products=localStorage.getItem("products");
-    products=JSON.parse(products)
-    let item=products.filter(item=> item.id==result);
-    console.log(item[0]);
-    let name=document.getElementById('description__title');
-    // let name=document.createElement("div");
-    // name.classList.add("description__title");
-    name.innerText=item[0].name;
-    // container.appendChild(name);
-    // console.log(container);
-    let price=document.getElementById("product--price");
-    price.innerText='$'+ item[0].price;
-    let cartbtn=document.getElementById("cart__btn")
-    cartbtn.onclick=function(){
-         let cartitems=JSON.parse(localStorage.getItem("cart"))
-         cartitems.push(item[0]);
-         localStorage.setItem("cart",JSON.stringify(cartitems));
-        // console.log(item)
-        // window.location = "itempage.html" + "?id=" + item.id
-      }
-    let ratingContainer = document.getElementById("product--review");
-        // ratingContainer.classList.add("product--review");
-        for (let i = 0; i < item[0].ratings; i++) {
-          let star = document.createElement("img");
-          star.src = "images/star-solid.svg";
-          star.classList.add("product--rating");
-          //  <img src='images/star-solid.svg' class='product--rating'>
-          ratingContainer.appendChild(star);
-          // <div class='product--review'><img stc='b hjmbm' class=''product--rating></div>
-        }
-
-  }
-  function label(e){
-console.log(e);
-  };
-productName(result[1]);
-</script>
 </html>
