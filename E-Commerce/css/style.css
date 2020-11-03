@@ -3,6 +3,7 @@
   margin-left: 1rem;
   height: 15px;
 }
+
 .social__icon {
   height: 15px;
   width: 15px;
@@ -21,37 +22,34 @@
 .brand__items--home {
   color: #3cb878;
 }
+
 .menu {
   margin-left: auto;
+  position: relative;
 }
+
 .slider__text {
   opacity: 1;
-  /* text-align: center; */
   color: #333333;
-
   font-weight: bold;
   font-size: 30px;
 }
+
 .slider__highlight {
   opacity: 1;
   justify-content: center;
   color: #3cb878;
   text-align: center;
 }
+
 .slider__para {
   color: #333333;
   opacity: 1;
   font-size: 18px;
 }
-.feedback {
-  background-color: #f5f6f9;
-}
 
-.detail{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
+.form {
+  background-color: #f5f6f9;
 }
 
 .form__btn {
@@ -61,57 +59,73 @@
   border-style: none;
   margin: 1rem;
 }
-.cart__btn{
-    background-color: #3cb878;
-    display: flex;
-    flex-direction: row;
+
+.cart__btn {
+  background-color: #3cb878;
+  display: flex;
+  flex-direction: row;
   color: white;
   justify-content: center;
   align-items: center;
   padding: 0.25rem 1rem 0.5rem 0.5rem;
   border-style: none;
   margin: 1rem;
+  outline: none;
+  white-space: nowrap;
 }
 
-.description__title{
-    font-weight: 600;
-    font-size: 20px;
-
+.cart__btn:active {
+  background-color: #04ff8e;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1rem 0.5rem 0.5rem;
+  border-style: none;
+  margin: 1rem;
+  outline: none;
 }
 
-.description__dropdown{
-    border: 0.5px solid #ebebeb;
+.description__title {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.description__dropdown {
+  border: 0.5px solid #ebebeb;
   padding: 1rem;
   margin: 1rem;
   width: 30%;
 }
 
-.description__number{
-    border: 0.5px solid #ebebeb;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    flex-grow: 1;
-    text-align: center;
+.description__number {
+  border: 0.5px solid #ebebeb;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  flex-grow: 1;
+  text-align: center;
 }
 
-.quantity--number{
-    border: 0.5px solid #ebebeb;
-    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
-    margin: 0;    
+.quantity--number {
+  border: 0.5px solid #ebebeb;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  margin: 0;
 }
 
-.like__btn{
-    border: 0.5px solid #ebebeb;
-    margin: 1rem 0.5rem 1rem 0.5rem;
-    background-color: #ffffff;
-    
-    
+.like__btn {
+  border: 0.5px solid #ebebeb;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  background-color: #ffffff;
+  outline: none;
 }
 
-.like__icon{
-    padding: 1rem;
-    height: 20px;
-    width: 20px;
+.like__icon {
+  padding: 1rem;
+  height: 20px;
+  width: 20px;
 }
+
 .rating--title {
   padding-right: 1rem;
 }
@@ -129,17 +143,20 @@
   border: 0.5px solid #ebebeb;
   padding: 2rem;
 }
+
 .service__icon {
   height: 2rem;
   width: 2rem;
   margin: 1rem;
   align-self: center;
 }
+
 .service--title {
   font-weight: bold;
   font-size: 14px;
   color: black;
 }
+
 .diamond {
   position: relative;
   height: 225px;
@@ -149,6 +166,7 @@
   margin: 50px 50px;
   padding: 1rem;
 }
+
 .diamond:before {
   position: absolute;
   content: "";
@@ -156,22 +174,17 @@
   left: 0px;
   height: 100%;
   width: 100%;
-
   border: 1px solid white;
   transform: rotateX(25deg) rotateZ(45deg);
 }
+
 .diamond:after {
   position: absolute;
   top: 10px;
   left: 10px;
   content: "";
-
-  height: calc(
-    100% - 22px
-  ); /* -22px is 2 * 10px gap on either side - 2px border on either side */
-  width: calc(
-    100% - 22px
-  ); /* -22px is 2 * 10px gap on either side - 2px border on either side */
+  height: calc(100% - 22px);
+  width: calc(100% - 22px);
   border: 1px solid white;
   transform: rotateX(25deg) rotateZ(45deg);
 }
@@ -180,12 +193,12 @@
   font-size: 20px;
   line-height: 24px;
   color: #333333;
-  font-family: "Poppins";
   text-align: center;
   font-weight: bold;
 }
-.padding-1{
-    padding: 0.5rem;
+
+.padding-1 {
+  padding: 0.5rem;
 }
 
 .products--text {
@@ -195,7 +208,6 @@
   color: #3cb878;
   font-weight: 400;
   font-style: italic;
-  font-family: "Droid Serif";
   text-align: center;
 }
 
@@ -204,76 +216,71 @@
   width: 200px;
 }
 
-.detail__image{
-    height: 300px;
-    width: 200px;
-
-}
-.detail__product{
-    flex-wrap: 1;
-    
-}
-.detail__images{
-
-    
+.detail__image {
+  height: 300px;
+  width: 200px;
 }
 
-.description{
-    margin:1rem;
-    flex-grow: 1;
+.detail__product {
+  flex-wrap: 1;
+}
 
+.description {
+  margin: 1rem;
 }
-.description__rate{
-    display: flex ;
-    flex-direction: row;
-    /* justify-content: center; */
-    align-items: center;
-   
+
+.description__rate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 20px;
 }
-.border-down{
-    border-bottom: 0.5px solid #EEEEEE;
-    line-height: 15px;
-    /* width: 60%; */
-    padding: 1rem;
+
+.border-down {
+  border-bottom: 0.5px solid #eeeeee;
+  line-height: 15px;
+  padding: 1rem;
 }
-.description__label{
-    display: flex;
-    flex-direction: row;
-}
+
 .product--name {
   padding-top: 0.5rem;
   font-size: 12px;
   font-weight: bold;
 }
-.para-text{
-    padding: 2rem;
-    font-weight: normal;
+
+.para-text {
+  padding: 2rem;
+  font-weight: normal;
 }
 
 .product--price {
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 24px;
   color: #3cb878;
   font-weight: 400;
-  font-family: "Droid Serif";
 }
 
 .product--rating {
   height: 15px;
   width: 15px;
 }
+
 .subscribe--img {
   padding: 1rem;
 }
+
 .newsletter__title {
   font-size: 19px;
   padding: 1rem;
 }
+
 .newsletter__text {
   padding: 0.5rem;
   text-align: center;
 }
+
 .newsletter__input {
   padding: 0.5rem;
 }
@@ -285,15 +292,11 @@
 }
 
 .footer__menu__title {
-  /* margin: 1rem; */
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 20px;
   color: #333333;
   font-weight: 600;
-  /* align-self: center; */
-  font-family: "Poppins";
-
   padding: 8px 8px 1rem 8px;
 }
 
@@ -301,4 +304,18 @@
   height: 2rem;
   width: 4rem;
   margin: 0.25rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .description__dropdown {
+    width: 100%;
+  }
+  .detail__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .border-right {
+    border: none;
+  }
 }

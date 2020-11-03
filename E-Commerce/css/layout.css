@@ -23,10 +23,21 @@
   padding-bottom: 1rem;
   padding-right: 2rem;
 }
-.description__details{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.description__label {
+  display: flex;
+  flex-direction: row;
+}
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
 }
 
 .contacts__desc {
@@ -50,6 +61,7 @@
   flex-direction: row;
   justify-self: center;
 }
+
 .brand__name {
   display: flex;
   flex-direction: row;
@@ -58,12 +70,6 @@
   font-size: 18px;
 }
 
-/* .brand__types {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
 .brand__items {
   display: flex;
   flex-direction: row;
@@ -72,12 +78,14 @@
   margin: auto;
   color: #3f4853;
   font-size: 13px;
+  padding-left: 7rem;
 }
 
 .best__seller {
   display: flex;
   flex-direction: row;
 }
+
 .best__seller--text {
   flex-grow: 1;
   display: flex;
@@ -93,41 +101,125 @@
   justify-content: space-evenly;
 }
 
-.img__container{
-    position: relative;
-    /* display: none; */
+.form__heading {
+  padding: 1rem;
+  padding-bottom: 0rem;
+  padding-top: 0;
 }
-.hoverbtn{
-    position: absolute;
-    /* z-index: 100; */
-    background-color: #3cb878;
-    right: 10px;
-    top: 10px;
-    display: flex;
-    display: none;
-    flex-direction: column;
+.review__title {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  font-size: 18px;
 }
+
+.img__container {
+  position: relative;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+}
+.hoverbtn {
+  background-color: #3cb878;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.cart__item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.5px solid #ebebeb;
+  padding: 0.5rem;
+}
+
+.cart__icon__container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.cart__number {
+  position: absolute;
+  border-radius: 100%;
+  padding: 0.1rem;
+  top: 5px;
+  right: -17px;
+  background-color: #3cb878;
+  font-weight: bold;
+  z-index: 999;
+  color: white;
+}
+
+.menu__cartlist {
+  padding: 1rem;
+  width: 250px;
+  top: 40px;
+  display: none;
+  right: 15px;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  box-shadow: 5px 5px 10px 0px #808080;
+  height: 150px;
+  overflow: auto;
+}
+
+.hover__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+  display: none;
+  right: 3px;
+}
+
 .slider {
   font-size: 30px;
   padding: 9rem;
+  height: 30vh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-color: black;
-  }
-
-.description__quantity{
-    display: flex;
-    flex-direction: row;
-    margin-left: 1rem;
-    width: 30%;
-}
-.buttons{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
-    width: 40%;
+  background-image: url("../images/pexels-mark-mccammon-1080696.jpg");
 }
 
+.slider__container {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  overflow: hidden;
+}
+
+.slider__button {
+  background-color: transparent;
+  border: 2px solid #808080;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  font-weight: bold;
+}
+.images__items {
+  width: 100%;
+  display: none;
+  height: 100%;
+  position: relative;
+  left: 0;
+  z-index: -10;
+}
+
+.description__quantity {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  width: 30%;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
+}
 
 .form {
   display: flex;
@@ -163,6 +255,14 @@
   flex-direction: row;
 }
 
+.review__name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.review__item {
+  padding: 0.75rem;
+}
 .service {
   background-color: #f5f6f9;
   height: 80%;
@@ -209,9 +309,9 @@
   margin-top: 30%;
   font-size: 22px;
   color: white;
-  /* text-align: center; */
-  /* height: fit-content;
-width: fit-content; */
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
   line-height: 20px;
 }
 .diamond__subtext {
@@ -228,6 +328,7 @@ width: fit-content; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 .products__container {
   display: flex;
@@ -246,8 +347,7 @@ width: fit-content; */
   padding: 1rem;
   font-weight: bold;
   color: #333333;
-  /* width: 400px; */
-
+  width: 400px;
 }
 
 .product--review {
@@ -268,7 +368,6 @@ width: fit-content; */
   line-height: 20px;
   color: #333333;
   font-weight: 400;
-  font-family: "Roboto";
   margin: auto;
 }
 
@@ -277,6 +376,20 @@ width: fit-content; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.feedback__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.feedback__tab {
+  padding: 0.5rem;
+  background: white;
+}
+
+.active {
+  background-color: #f5f6f9;
 }
 
 .subscribe__newsletter {
@@ -289,6 +402,31 @@ width: fit-content; */
   color: white;
   font-style: bold;
 }
+
+.form__reviews {
+  display: flex;
+  flex-direction: row;
+}
+
+.review__image {
+  margin-left: 2rem;
+  width: 75px;
+  height: 75px;
+  background-color: black;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.review__comment {
+  margin-top: 1rem;
+  background-color: white;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 90%;
+}
+
 .subscribe__images {
   background-color: #f5f6f9;
   display: flex;
@@ -299,6 +437,16 @@ width: fit-content; */
 
 .subscribe__item {
   flex-grow: 1;
+}
+
+.product__price {
+  margin-left: auto;
+  color: #3cb878;
+}
+
+.product__name {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .footer__menu {
@@ -361,96 +509,125 @@ width: fit-content; */
   margin-top: 0.75rem;
 }
 
-@media screen and (min-width:0px)  and (max-width:768px){
-    .sale {
-        
-        display: flex;
-        flex-direction: column;
-      }
-      .products__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .subscribe{
-          display: flex;
-          flex-direction: column;
-      }
-      .subscribe__images{
-          display: flex;
-          flex-direction: column;
-      }
-      .best__seller__products {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        align-items: center;
-      }
-      
-      .service {
-        background-color: #f5f6f9;
-        /* height: 80%; */
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-around; */
-      }
-      .brand {
-        margin: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-      }
-      .brand__name {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-      }
-      .brand__items {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        font-size: 13px;
-      }
-      .contacts {
-          height: 120px;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .best__seller {
-        display: flex;
-        flex-direction: column;
-      }
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .sale {
+    display: flex;
+    flex-direction: column;
+  }
+  .products__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe__images {
+    display: flex;
+    flex-direction: column;
+  }
+  .best__seller__products {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .service {
+    background-color: #f5f6f9;
+    display: flex;
+    flex-direction: column;
+  }
+  .brand {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    position: relative;
+  }
+  .brand__name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+  .brand__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 13px;
+    padding-left: 0.5rem;
+  }
+  .contacts {
+    height: 120px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .best__seller {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .footer__bottom {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .line {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-self: center;
+  }
+  .slider {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    padding: 1rem;
+    height: 50vh;
 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-image: url("../images/pexels-mark-mccammon-1080696.jpg");
+  }
 
-      .footer__menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 1rem;
-      }
-      .footer__bottom {
-      
-        height: 8rem;
-        display: flex;
-        flex-direction: column;
-      }
-      .line {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        justify-self: center;
-      }
-      .slider {
-        font-size: 30px;
-    
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    
-      }
+  .form__input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .form__rating {
+    display: flex;
+    flex-direction: column;
+  }
+  .detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .description__label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
