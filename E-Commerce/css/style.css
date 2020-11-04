@@ -48,6 +48,16 @@
   font-size: 18px;
 }
 
+.shortcut__menu{
+    margin-left: 24%;
+    width: fit-content;
+    padding-bottom: 1rem ;
+    font-size: 12px;
+}
+
+.shortcuts{
+    width: 100%;
+}
 .form {
   background-color: #f5f6f9;
 }
@@ -217,8 +227,8 @@
 }
 
 .detail__image {
-  height: 300px;
-  width: 200px;
+  height: 500px;
+  width: 250px;
 }
 
 .detail__product {
@@ -304,6 +314,12 @@
   height: 2rem;
   width: 4rem;
   margin: 0.25rem;
+}
+
+.description__container{
+    display: none;
+    background-color: #f5f6f9;
+    padding: 1.5rem;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
