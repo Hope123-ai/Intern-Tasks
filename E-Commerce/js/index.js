@@ -166,3 +166,4 @@ function slider(images, interval) {
 var slider = new slider(images, 3500);
 console.log(slider);
 slider.changeImage();
+

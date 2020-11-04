@@ -37,12 +37,34 @@
     </div>
   </div>
 </div>
+<div class="shortcuts">
+  <div class="shortcut__menu">Home >> Page >> Shop >><span class="brand__items--home"> Product</span>
+  </div></div>
 <div class="detail">
   <div class="detail__product">
     <div class="detail__images">
-      <img src="images/pexels-mark-mccammon-1080696.jpg" class="detail__image" />
+      <img src="images/pexels-mark-mccammon-1080696.jpg" class="detail__image" id="detail__image" />
     </div>
     <div class="detail__image__slider">
+      
+
+      <button class="slider__left" id="slider__left">
+        &#60;
+        &#60;
+
+      </button>
+
+      <div class="slide__img" id="slide__img">
+        <img src="images/pexels-karolina-grabowska-5632371.jpg" class="img__small" id="img__small-1"/>
+        <img src="images/pexels-karolina-grabowska-5632371.jpg" class="img__small" id="img__small-2"/>
+        <img src="images/pexels-karolina-grabowska-5632371.jpg" class="img__small" id="img__small-3"/>
+      </div>
+      <button class="slider__right" id="slider__right">
+        &#62;
+        &#62;
+
+
+      </button>
     </div>
   </div>
   <div class="description" id="description">
@@ -87,18 +109,21 @@
 
 <div class="feedback">
   <div class="feedback__container">
-    <div class="feeback__description feedback__tab">Description
+    <div class="feeback__description feedback__tab" id="feedback__description">Description
     </div>
-    <div class="feedback__reviews feedback__tab active">Reviews
+    <div class="feedback__reviews feedback__tab active" id="feedback__reviews">Reviews
 
     </div>
   </div>
-  <div class="">
+  <div class="description__container" id="description__container">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+
 
   </div>
 
-  <div class="form">
-    <div class="form__reviews ">
+  <div class="form" id="form__container">
+    <div class="form__reviews">
       <div class="review__image"
       > 
       </div>
@@ -162,11 +187,20 @@
       <button class="form__btn">SUBMIT</button>
     </div>
   </div>
-
 </div>
 
 </div>
-<div class="best__seller__products">
+<div class="best__seller__container">
+  <div class="related__product__container">
+<div class="related__products">
+  Related Products
+</div>
+<div class="slider_arrow">
+  <button class="green left" id="left__arrow">&#8592;</button>
+  <button class="green right" id="right__arrow">&#8594;</button>
+  </div>
+</div>
+<div class="best__seller__products" id="best__seller__products">
   <div class="product__menu">
     <img src="images/pexels-mark-mccammon-1080696.jpg" class="product__images" />
     <div class="product--name">Cruise Dual Analog</div>
@@ -215,6 +249,7 @@
       <img src="images/star-regular.svg" class="product--rating" />
     </div>
   </div>
+</div>
 </div>
 <div class="line">
   <div class="line__text">
