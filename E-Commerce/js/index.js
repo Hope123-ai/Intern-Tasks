@@ -13,19 +13,19 @@ window.onclick = function (e) {
   }
 };
 let products = [
-  { name: "Cruise Dual Analog", price: 250.0, ratings: 4, id: 1 },
-  { name: "Crown Summit Backpack", price: 250.0, ratings: 4, id: 2 },
-  { name: "Joust Duffle Bag", price: 250.0, ratings: 4, id: 3 },
-  { name: "Voyage Yoga Bag", price: 250.0, ratings: 4, id: 4 },
-  { name: "Compete Track Tote", price: 250.0, ratings: 4, id: 5 },
-  { name: "Sprite Yoga Companion Kit", price: 250.0, ratings: 4, id: 6 },
-  { name: "Strive Shoulder Pack", price: 250.0, ratings: 4, id: 7 },
-  { name: "Impulse Duffle", price: 250.0, ratings: 4, id: 8 },
-  { name: "Fusion Backpack", price: 250.0, ratings: 4, id: 9 },
-  { name: "Endeavor Daytrip", price: 250.0, ratings: 4, id: 10 },
+  { name: "Cruise Dual Analog", price: 250.0, ratings: 4, id: 1 ,pricenew: 250.0},
+  { name: "Crown Summit Backpack", price: 250.0, ratings: 4, id: 2 ,pricenew: 250.0},
+  { name: "Joust Duffle Bag", price: 250.0, ratings: 4, id: 3 ,pricenew: 250.0},
+  { name: "Voyage Yoga Bag", price: 250.0, ratings: 4, id: 4 ,pricenew: 250.0},
+  { name: "Compete Track Tote", price: 250.0, ratings: 4, id: 5 ,pricenew: 250.0},
+  { name: "Sprite Yoga Companion Kit", price: 250.0, ratings: 4, id: 6,pricenew: 250.0 },
+  { name: "Strive Shoulder Pack", price: 250.0, ratings: 4, id: 7 ,pricenew: 250.0},
+  { name: "Impulse Duffle", price: 250.0, ratings: 4, id: 8 ,pricenew: 250.0},
+  { name: "Fusion Backpack", price: 250.0, ratings: 4, id: 9,pricenew: 250.0 },
+  { name: "Endeavor Daytrip", price: 250.0, ratings: 4, id: 10,pricenew: 250.0 },
 ];
 localStorage.setItem("products", JSON.stringify(products));
-let cartlist = [{ name: "Fusion Backpack", price: 250.0, ratings: 4, id: 9 }];
+let cartlist = [{ name: "Fusion Backpack", price: 250.0, ratings: 4, id: 9,pricenew: 250.0,quantity:1}];
 localStorage.setItem("cart", JSON.stringify(cartlist));
 function initialize() {
   let container = document.getElementById("products__list");
@@ -61,7 +61,7 @@ function initialize() {
     hover.id = "hover-" + item.id;
     let image = document.createElement("img");
     image.src = "images/pexels-mark-mccammon-1080696.jpg";
-    image.classList.add("product__images");
+    image.classList.add("product__img");
     imageparent.appendChild(image);
     let hoverparent = document.createElement("div");
     hoverparent.classList.add("hover__container");
